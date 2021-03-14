@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".view.WelcomeScreen" android:windowSoftInputMode="adjustResize"
+        <activity android:name=".view.WelcomeScreen" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.ChatActivity" android:windowSoftInputMode="adjustUnspecified"/>
+        <activity android:name=".view.ChatActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified"/>
     </application>
 
 </manifest>
