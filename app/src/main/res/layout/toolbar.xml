@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    android:layout_height="64dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/blue"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/leaveButton"
+        android:text="Leave"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@id/leaveButton"
+        android:layout_marginStart="36dp"
+        android:id="@+id/nicknameText"
+        android:textColor="@color/white"
+        android:text="Nickname"
+        android:textSize="24sp"
+        android:gravity="center"/>
+    </RelativeLayout>
+</androidx.appcompat.widget.Toolbar>

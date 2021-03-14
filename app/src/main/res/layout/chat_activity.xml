@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/chatActivityLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@+id/toolbar" layout="@layout/toolbar"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/messagesRecyclerView"
+        android:layout_marginTop="64dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginBottom="12dp"
+        android:layout_above="@id/messageEntryContainer"
+        android:orientation="vertical"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/blue"
+        android:id="@+id/messageEntryContainer">
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/messageEntryCard"
+            android:layout_marginStart="24dp"
+            app:cardCornerRadius="48dp">
+            <EditText
+                android:layout_width="246dp"
+                android:layout_height="36dp"
+                android:hint="Enter your message"
+                android:id="@+id/messageEntryField"
+                android:completionThreshold="1"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:background="@color/white"
+                android:textColor="@android:color/holo_blue_light"
+                android:textColorHint="@android:color/darker_gray"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/sendMessageCard"
+            app:cardBackgroundColor="@color/dark_blue"
+            android:layout_toEndOf="@id/messageEntryCard"
+            android:layout_marginStart="24dp"
+            app:cardCornerRadius="48dp">
+            <TextView
+                android:layout_width="84dp"
+                android:layout_height="36dp"
+                android:text="Send"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/blue" />
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

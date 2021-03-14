@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/userAvatar"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        android:layout_marginTop="12dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nickname"
+        app:layout_constraintStart_toEndOf="@id/userAvatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        android:text="Avatar"
+        android:layout_marginTop="12dp"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/messageContainerCard"
+        app:layout_constraintStart_toStartOf="@id/nickname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nickname"
+        android:layout_marginEnd="64dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="6dp"
+        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="@color/blue">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:id="@+id/receivedMessageText"
+            android:text="This message is to demonstrate an example message of how it would look like when there is a very long message"
+            android:textColor="@color/white"/>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/messageContainerCard"
+        app:layout_constraintStart_toStartOf="@id/messageContainerCard"
+        app:layout_constraintEnd_toEndOf="@id/messageContainerCard"
+        android:text="4:00 am, Tuesday"
+        android:textAlignment="textStart"
+        android:id="@+id/receivedMessageDateText"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
