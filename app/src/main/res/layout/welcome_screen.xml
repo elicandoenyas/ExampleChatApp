@@ -16,7 +16,7 @@
         <EditText
             android:layout_width="246dp"
             android:layout_height="wrap_content"
-            android:hint="Nickname"
+            android:hint="@string/nickname"
             android:id="@+id/nicknameText"
             android:completionThreshold="1"
             android:imeOptions="actionDone"
@@ -47,7 +47,7 @@
         app:layout_constraintStart_toStartOf="@id/nickNameField"
         app:layout_constraintEnd_toEndOf="@id/nickNameField"
         android:id="@+id/continueBtn"
-        android:text="Continue"
+        android:text="@string/continue_txt"
         android:textAllCaps="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.08"/>
